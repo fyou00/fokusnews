@@ -1,0 +1,14 @@
+.navbar-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Memusatkan nav link */
+}
+
+.blue-box {
+  background-color: #007bff; /* Warna biru */
+  color: white; /* Warna teks putih */
+  padding: 20px; /* Padding untuk ruang di dalam kotak */
+  border-radius: 8px; /* Sudut kotak yang melengkung */
+  text-align: center; /* Teks di tengah */
+  height: 380px;
+}
