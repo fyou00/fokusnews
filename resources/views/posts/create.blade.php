@@ -9,7 +9,7 @@
 <body>
     <div class="container mt-5">
         <h1>Create New Post</h1>
-
+ajsdajs
         @if (session('success'))
             <div class="alert alert-success">
                 {{ session('success') }}
