@@ -15,8 +15,8 @@ Route::post('/posts/store', [PostController::class, 'store'])->name('posts.store
 //     return view('berita', ['title' => 'Berita']);
 // });
 
-Route::get('/pendidikan', function () {
-    return view('berita', ['title' => 'Pendidikan']);
+Route::get('/pendidikan', function (Post $post) {
+    return view('berita', ['title' => 'Pendidikan', 'posts' => $post]);
 });
 
 Route::get('/ekonomi', function () {
