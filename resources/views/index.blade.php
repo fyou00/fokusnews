@@ -1,7 +1,9 @@
-<x-layout>
+@extends('components/layout')
+
+@section('konten')
   <div class="container px-5">
-    {{ $title }}
-    <div class="row p-2 bg-warning">
+    <a href="posts/create" class="btn btn-primary">create posts</a>
+    {{-- <div class="row p-2 bg-warning">
       <div class="col-md-8 bg-primary-subtle">
         <div class="blue-box">
             <h3>Ini adalah Kotak Biru</h3>
@@ -17,6 +19,14 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> --}}
+    <table>
+      @foreach ($posts as $post)
+        <tr>
+          <td>{{ $post->$title }}</td>
+          <td>{{ $post->$content }}</td>
+        </tr>
+      @endforeach
+    </table>
   </div>
-</x-layout>
+@endsection

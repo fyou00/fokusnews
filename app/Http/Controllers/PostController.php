@@ -6,6 +6,12 @@ use App\Models\Post;
 
 class PostController extends Controller
 {
+  public function index()
+  {
+      $posts = Post::all(); // Ambil semua data post
+      return view('index', compact('posts'));
+  }
+
     // Menampilkan form input
     public function create()
     {

@@ -6,13 +6,14 @@ use App\Http\Controllers\PostController;
 
 // Menampilkan form input
 Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
+// Route::get('/', [PostController::class, 'index']);
 
 // Menyimpan data
 Route::post('/posts/store', [PostController::class, 'store'])->name('posts.store');
 
 
 Route::get('/', function () {
-    return view('berita', ['title' => 'Berita']);
+    return view('index', ['posts' => Post::all()]);
 });
 
 Route::get('/pendidikan', function (Post $post) {
