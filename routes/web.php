@@ -16,8 +16,8 @@ Route::get('/', function () {
     return view('index', ['posts' => Post::all()]);
 });
 
-Route::get('/pendidikan', function (Post $post) {
-    return view('berita', ['title' => 'Pendidikan', 'posts' => $post]);
+Route::get('/pendidikan', function () {
+    return view('berita', ['title' => 'Pendidikan']);
 });
 
 Route::get('/ekonomi', function () {
