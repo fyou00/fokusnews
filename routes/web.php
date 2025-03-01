@@ -5,12 +5,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 
 // Menampilkan form input
-Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
-// Route::get('/', [PostController::class, 'index']);
+// Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
 
 // Menyimpan data
-Route::post('/posts/store', [PostController::class, 'store'])->name('posts.store');
+// Route::post('/posts/store', [PostController::class, 'store'])->name('posts.store');
 
+Route::resource('posts', PostController::class);
 
 Route::get('/', function () {
     return view('index', ['posts' => Post::all()]);
