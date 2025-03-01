@@ -20,13 +20,30 @@
         </div>
       </div>
     </div> --}}
-    @foreach ($posts as $post)
     <table>
-        <tr>
-          <td>{{ $post['title'] }}</td>
-          <td>{{ $post['content'] }}</td>
-        </tr>
-      </table>
-    @endforeach
+      <thead>
+          <tr>
+              <th>Title</th>
+              <th>Content</th>
+              <th>Actions</th>
+          </tr>
+      </thead>
+      <tbody>
+          @foreach ($posts as $post)
+              <tr>
+                  <td>{{ $post->title }}</td>
+                  <td>{{ $post->content }}</td>
+                  <td>
+                      <a href="{{ route('posts.edit', $post) }}">Edit</a>
+                      <form action="{{ route('posts.destroy', $post) }}" method="POST" style="display:inline;">
+                          @csrf
+                          @method('DELETE')
+                          <button type="submit" onclick="return confirm('Are you sure?')">Delete</button>
+                      </form>
+                  </td>
+              </tr>
+          @endforeach
+      </tbody>
+  </table>
   </div>
 @endsection

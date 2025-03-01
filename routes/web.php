@@ -12,9 +12,9 @@ use App\Http\Controllers\PostController;
 
 Route::resource('posts', PostController::class);
 
-Route::get('/', function () {
-    return view('index', ['posts' => Post::all()]);
-});
+// Route::get('/', function () {
+//     return view('index', ['posts' => Post::all()]);
+// });
 
 Route::get('/pendidikan', function () {
     return view('berita', ['title' => 'Pendidikan']);
@@ -30,9 +30,4 @@ Route::get('/olahraga', function () {
 
 Route::get('/wisata', function () {
     return view('berita', ['title' => 'Wisata']);
-});
-
-
-Route::get('posts/{post:slug}', function(Post $post) {
-  return view('post', ['post' => $post]);
 });
