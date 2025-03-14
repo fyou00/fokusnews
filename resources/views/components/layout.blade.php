@@ -12,7 +12,6 @@
   <x-navbar></x-navbar>
   <main>
     <div class="mt-3 container">
-      <!-- Your content -->
       @yield('konten')
     </div>
   </main>
