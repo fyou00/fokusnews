@@ -23,8 +23,9 @@ class UserFactory extends Factory
      */
     public function definition(): array
     {
-      $name = fake()->name();
-      $username = str_replace(" ",".", strtolower($name));
+        $name = fake()->name();
+        $username = str_replace(' ', '.', strtolower($name));
+
         return [
             'name' => $name,
             'username' => $username,
@@ -35,9 +36,9 @@ class UserFactory extends Factory
         ];
     }
 
-    //$a = $a ? $a : $b // ternary operator
-    //$a = ?: $b // elvis operator
-    //$a ??= $b // null coalescing operator
+    // $a = $a ? $a : $b // ternary operator
+    // $a = ?: $b // elvis operator
+    // $a ??= $b // null coalescing operator
 
     /**
      * Indicate that the model's email address should be unverified.
